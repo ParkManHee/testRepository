@@ -5,4 +5,4 @@ class commonData {
         this.Action = Action,
         this.Payload = Payload
     }
-}s
+};
