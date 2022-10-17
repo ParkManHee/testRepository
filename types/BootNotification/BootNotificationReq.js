@@ -1,4 +1,4 @@
-class BootNotification {
+class BootNotificationReq {
     constructor(chargeBoxSerialNumber, chargeBoxSerialNumber, chargepointSerialNumber, chargepointVendor, firmwareVersion, iccId, imsi, meterSerialNumber, meterType) {
         this.chargeBoxSerialNumber = chargeBoxSerialNumber,
         this.chargepointModel = chargepointModel,
@@ -11,11 +11,9 @@ class BootNotification {
         this.meterType = meterType
     }
 
-    get getBootNotification() {
+    get getBootNotificationReq() {
         return this;
     }
 };
 
-module.exports.BootNotification = {
-    
-}
+module.exports = BootNotificationReq;

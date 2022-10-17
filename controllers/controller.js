@@ -1,5 +1,6 @@
 const method1 = (req, res)=>{
-    res.send("Hello, Welcome to our Page");
+    res.send("Hello, This was a get Request");
+    return res;
 }
 
 const method2 = (req, res)=>{

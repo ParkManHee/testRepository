@@ -1,11 +1,11 @@
 // 3rd Party Modules
-const { Router } = require('express');
+const express = require('express');
 
 // Local Modules
 const myController = require('../controllers/controller');
 
 // Initialization
-const router = Router();
+const router = express.Router();
 
 // Requests 
 router.get('/', myController.method1);

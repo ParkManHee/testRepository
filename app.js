@@ -1,14 +1,14 @@
 // 3rd Party Modules
 const express = require('express');
 require('dotenv/config');
-const index = require('./routes/index.js');
 
 const app = express();
 const PORT = 8000;
 
 app.use(express.json());
 
-app.use('/', index); 
+app.use('/', './routes/index'); 
+app.use('/boot', './routes/BootNotification'); 
 
 app.listen(PORT, (error) =>{
     if(!error)
@@ -17,3 +17,5 @@ app.listen(PORT, (error) =>{
         console.log("Error occurred, server can't start", error);
     }
 );
+
+module.exports = app;
