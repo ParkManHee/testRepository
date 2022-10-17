@@ -10,4 +10,4 @@ class BootNotificationRes {
     }
 };
 
-module.exports = BootNotificationRes;
+module.exports = BootNotificationRes();

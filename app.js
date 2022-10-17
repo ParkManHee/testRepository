@@ -1,14 +1,18 @@
 // 3rd Party Modules
 const express = require('express');
+const asyncify = require('express-asyncify');
 require('dotenv/config');
 
-const app = express();
+const app = asyncify(express());
 const PORT = 8000;
 
 app.use(express.json());
 
-app.use('/', './routes/index'); 
-app.use('/boot', './routes/BootNotification'); 
+const index = require('./routes/index');
+const bootNotification = require('./routes/BootNotification'); 
+
+app.use('/', index); 
+app.use('/boot', bootNotification); 
 
 app.listen(PORT, (error) =>{
     if(!error)

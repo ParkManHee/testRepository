@@ -16,4 +16,4 @@ class BootNotificationReq {
     }
 };
 
-module.exports = BootNotificationReq;
+module.exports = BootNotificationReq();
