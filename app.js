@@ -9,17 +9,21 @@ const PORT = 8000;
 app.use(express.json());
 
 const index = require('./routes/index');
-const bootNotification = require('./routes/BootNotification'); 
+const bootNotification = require('./routes/BootNotification');
+const remoteControl = require('./routes/remoteControl');
 
-app.use('/', index); 
-app.use('/boot', bootNotification); 
+app.use('/', index);
+app.use('/boot', bootNotification);
+app.use('/remote-control', remoteControl);
 
 app.listen(PORT, (error) =>{
-    if(!error)
+    if (!error) {
         console.log("Server is Successfully Running, and App is listening on port "+ PORT)
-    else 
+    }
+    else {
         console.log("Error occurred, server can't start", error);
     }
+},
 );
 
 module.exports = app;

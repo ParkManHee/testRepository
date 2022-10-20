@@ -3,6 +3,6 @@ class commonData {
         this.MessageTypeId = MessageTypeId,
         this.UniqueId = UniqueId,
         this.Action = Action,
-        this.Payload = Payload
+        this.Payload = Payload;
     }
 };

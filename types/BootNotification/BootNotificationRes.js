@@ -2,7 +2,7 @@ class BootNotificationRes {
     constructor(currentTime, interval, status) {
         this.currentTime = currentTime,
         this.interval = interval,
-        this.status = status
+        this.status = status;
     }
 
     get getBootNotificationRes() {
